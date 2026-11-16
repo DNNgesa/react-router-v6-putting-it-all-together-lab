@@ -42,44 +42,53 @@ function MovieForm() {
         return r.json();
       })
       .then((data) => {
-        // Update the matching director in context state with the updated movies list
         setDirectors((prevDirectors) =>
           prevDirectors.map((dir) =>
             String(dir.id) === String(data.id) ? data : dir
           )
         );
-        // Navigate to the newly created movie detail page
         navigate(`/directors/${id}/movies/${newMovie.id}`);
       })
       .catch(console.log);
   };
 
   return (
-    <div>
-      <h2>Add New Movie</h2>
+    <div className="card bg-light border-0 p-4 mt-3">
+      <h2 className="h4 fw-bold mb-3">Add New Movie</h2>
       <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Movie Title"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-          required
-        />
-        <input
-          type="number"
-          placeholder="Duration (minutes)"
-          value={time}
-          onChange={(e) => setTime(e.target.value)}
-          required
-        />
-        <input
-          type="text"
-          placeholder="Genres (comma-separated)"
-          value={genres}
-          onChange={(e) => setGenres(e.target.value)}
-          required
-        />
-        <button type="submit">Add Movie</button>
+        <div className="mb-3">
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Movie Title"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+            required
+          />
+        </div>
+        <div className="mb-3">
+          <input
+            type="number"
+            className="form-control"
+            placeholder="Duration (minutes)"
+            value={time}
+            onChange={(e) => setTime(e.target.value)}
+            required
+          />
+        </div>
+        <div className="mb-3">
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Genres (comma-separated)"
+            value={genres}
+            onChange={(e) => setGenres(e.target.value)}
+            required
+          />
+        </div>
+        <button type="submit" className="btn btn-success w-100">
+          Add Movie
+        </button>
       </form>
     </div>
   );

@@ -33,23 +33,32 @@ function DirectorForm() {
   };
 
   return (
-    <div>
-      <h2>Add New Director</h2>
+    <div className="card shadow-sm border-0 p-4">
+      <h2 className="h4 fw-bold mb-3">Add New Director</h2>
       <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Director's Name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          required
-        />
-        <textarea
-          placeholder="Director's Bio"
-          value={bio}
-          onChange={(e) => setBio(e.target.value)}
-          required
-        />
-        <button type="submit">Add Director</button>
+        <div className="mb-3">
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Director's Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
+          />
+        </div>
+        <div className="mb-3">
+          <textarea
+            className="form-control"
+            rows="4"
+            placeholder="Director's Bio"
+            value={bio}
+            onChange={(e) => setBio(e.target.value)}
+            required
+          />
+        </div>
+        <button type="submit" className="btn btn-primary w-100">
+          Add Director
+        </button>
       </form>
     </div>
   );
