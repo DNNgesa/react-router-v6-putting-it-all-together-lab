@@ -6,7 +6,7 @@ function About() {
       <NavBar />
       <main className="container my-4" style={{ maxWidth: "800px" }}>
         <div className="card shadow-sm border-0 p-4">
-          <h1 className="h2 fw-bold mb-3">About the Movie Directory 🎞️</h1>
+          <h1 className="h2 fw-bold mb-3">About the Movie Directory</h1>
           <p className="text-muted">
             This application showcases a list of notable film directors and
             their works. Users can:

@@ -8,7 +8,7 @@ function Home() {
       <main className="container my-5" style={{ maxWidth: "750px" }}>
         <div className="card shadow-sm border-0 p-5 text-center bg-light">
           <h1 className="display-6 fw-bold mb-3">
-            🎬 Welcome to the Movie Directory 🎥
+            Welcome to the Movie Directory
           </h1>
           <p className="lead text-muted mb-4">
             Explore a collection of famous directors and their iconic movies.

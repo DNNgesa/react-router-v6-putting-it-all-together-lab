@@ -20,8 +20,8 @@ function MovieCard() {
   return (
     <div className="card bg-light border-primary mt-3 p-3">
       <h2 className="h4 fw-bold mb-2">{movie.title}</h2>
-      <p className="mb-1">⏱️ Duration: {movie.time} minutes</p>
-      <p className="mb-0">🎬 Genres: {movie.genres.join(", ")}</p>
+      <p className="mb-1">Duration: {movie.time} minutes</p>
+      <p className="mb-0">Genres: {movie.genres.join(", ")}</p>
     </div>
   );
 }
